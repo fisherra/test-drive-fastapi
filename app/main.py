@@ -1,3 +1,6 @@
+# project/app/main.py
+
+
 import logging
 
 from fastapi import FastAPI
@@ -13,7 +16,7 @@ def create_application() -> FastAPI:
     application.include_router(ping.router)
     application.include_router(
         summaries.router, prefix="/summaries", tags=["summaries"]
-    )  # new
+    )
 
     return application
 

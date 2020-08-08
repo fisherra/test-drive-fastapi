@@ -1,3 +1,6 @@
+# project/app/config.py
+
+
 import logging
 import os
 from functools import lru_cache
@@ -7,7 +10,6 @@ from pydantic import AnyUrl, BaseSettings
 log = logging.getLogger(__name__)
 
 
-# settings class has two attributes
 class Settings(BaseSettings):
     environment: str = os.getenv("ENVIRONMENT", "dev")
     testing: bool = os.getenv("TESTING", 0)
